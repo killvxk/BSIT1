@@ -108,6 +108,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,6 +131,13 @@
     <Midl Include="Example1.idl">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/app_config %(AdditionalOptions)</AdditionalOptions>
     </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Example1_s.cpp" />
+    <ClCompile Include="Server.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Example1_h.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

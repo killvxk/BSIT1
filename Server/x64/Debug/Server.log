@@ -28,3 +28,7 @@
   oaidl.acf
   64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\ocidl.acf
   ocidl.acf
+  Example1_s.cpp
+  Server.cpp
+  Создание кода...
+  Server.vcxproj -> C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\x64\Debug\Server.exe

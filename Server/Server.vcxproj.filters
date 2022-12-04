@@ -19,4 +19,17 @@
       <Filter>Файлы ресурсов</Filter>
     </Midl>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Server.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="Example1_s.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Example1_h.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

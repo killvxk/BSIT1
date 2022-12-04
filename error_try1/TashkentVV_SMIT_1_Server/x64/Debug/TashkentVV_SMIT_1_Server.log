@@ -1,0 +1,13 @@
+﻿interface_s.obj : error LNK2001: неразрешенный внешний символ download_to_client.
+    Указание на символы, которые определены и могут подойти:
+      "int __cdecl download_to_client(char const *,char * const,int *,int,int *)" (?download_to_client@@YAHPEBDQEADPEAHH2@Z)
+interface_s.obj : error LNK2001: неразрешенный внешний символ send_to_server.
+    Указание на символы, которые определены и могут подойти:
+      "int __cdecl send_to_server(char const *,char * const,int,int,int)" (?send_to_server@@YAHPEBDQEADHHH@Z)
+interface_s.obj : error LNK2001: неразрешенный внешний символ delete_file_on_server.
+    Указание на символы, которые определены и могут подойти:
+      "int __cdecl delete_file_on_server(char const *,int)" (?delete_file_on_server@@YAHPEBDH@Z)
+interface_s.obj : error LNK2001: неразрешенный внешний символ login_client.
+    Указание на символы, которые определены и могут подойти:
+      "int __cdecl login_client(char const *,char const *,int *)" (?login_client@@YAHPEBD0PEAH@Z)
+C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\TashkentVV_SMIT_1_Server\x64\Debug\TashkentVV_SMIT_1_Server.exe : fatal error LNK1120: неразрешенных внешних элементов: 4

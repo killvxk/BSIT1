@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7212f8ac-930a-4a03-a2a7-040e46428539}</ProjectGuid>
+    <ProjectGuid>{e64da646-a23c-4545-a315-1fc2bb6c86f1}</ProjectGuid>
     <RootNamespace>Client</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -129,15 +129,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp" />
-    <ClCompile Include="Example2_c.cpp" />
+    <ClCompile Include="Example1_c.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Example2.idl">
+    <Midl Include="Example1.idl">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/app_config %(AdditionalOptions)</AdditionalOptions>
     </Midl>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Example2_h.h" />
+    <ClInclude Include="Example1_h.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

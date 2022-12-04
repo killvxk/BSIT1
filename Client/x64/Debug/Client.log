@@ -1,5 +1,5 @@
-﻿  64 bit Processing .\Example2.idl
-  Example2.idl
+﻿  64 bit Processing .\Example1.idl
+  Example1.idl
   64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\oaidl.idl
   oaidl.idl
   64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\objidl.idl
@@ -29,6 +29,6 @@
   64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\ocidl.acf
   ocidl.acf
   Client.cpp
-  Example2_c.cpp
+  Example1_c.cpp
   Создание кода...
   Client.vcxproj -> C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Client\x64\Debug\Client.exe

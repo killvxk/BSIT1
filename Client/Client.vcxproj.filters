@@ -18,17 +18,17 @@
     <ClCompile Include="Client.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Example2_c.cpp">
+    <ClCompile Include="Example1_c.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Example2.idl">
+    <Midl Include="Example1.idl">
       <Filter>Файлы ресурсов</Filter>
     </Midl>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Example2_h.h">
+    <ClInclude Include="Example1_h.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

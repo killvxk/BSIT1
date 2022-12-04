@@ -1,6 +1,6 @@
 // File Example1Client.cpp
 #include <iostream>
-#include "Example2_h.h"
+#include "Example1_h.h"
 
 int main()
 {
@@ -37,7 +37,7 @@ int main()
         // Calls the RPC function. The hExample1Binding binding handle
         // is used implicitly.
         // Connection is done here.
-        Output((const unsigned char *)"Hello RPC World!");
+        Output((const unsigned char*)"Hello RPC World!");
     }
         RpcExcept(1)
     {

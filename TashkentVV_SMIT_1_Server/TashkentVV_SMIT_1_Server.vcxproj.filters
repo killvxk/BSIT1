@@ -19,4 +19,17 @@
       <Filter>Файлы ресурсов</Filter>
     </Midl>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TashkentVV_SMIT_1_Server.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="interface_s.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="interface_h.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

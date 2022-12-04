@@ -131,6 +131,13 @@
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/app_config %(AdditionalOptions)</AdditionalOptions>
     </Midl>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="interface_s.c" />
+    <ClCompile Include="TashkentVV_SMIT_1_Server.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="interface_h.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

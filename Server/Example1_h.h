@@ -66,6 +66,34 @@ extern "C"{
 void Output( 
     /* [string][in] */ const unsigned char *szOutput);
 
+#define	cMaxBuf	( 100000 )
+
+int download_to_client( 
+    /* [in][string] */ const unsigned char *path,
+    /* [out] */ unsigned char buf[ 100000 ],
+    /* [out] */ int *length_buf,
+    /* [in] */ int index,
+    /* [out] */ int *check_eof);
+
+int send_to_server( 
+    /* [in][string] */ const unsigned char *file_name,
+    /* [in] */ unsigned char buf[ 100000 ],
+    /* [in] */ int length_buf,
+    /* [in] */ int index,
+    /* [in] */ int check_eof);
+
+int delete_file_on_server( 
+    /* [in][string] */ const unsigned char *path,
+    /* [in] */ int index);
+
+int login_client( 
+    /* [in][string] */ const unsigned char *login,
+    /* [in][string] */ const unsigned char *password,
+    /* [out] */ int *index);
+
+int client_out( 
+    /* [in] */ int index);
+
 
 extern handle_t hExample1Binding;
 

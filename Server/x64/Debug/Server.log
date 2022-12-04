@@ -30,5 +30,10 @@
   ocidl.acf
   Example1_s.cpp
   Server.cpp
+C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\Server.cpp(14,2): warning C4091: typedef : пропускается слева от "info_client", когда ни одна переменная не объявлена
+C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\Server.cpp(38,1): warning C4010: однострочный комментарий содержит знак объединения строк
+C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\Server.cpp(39,1): warning C4010: однострочный комментарий содержит знак объединения строк
+C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\Server.cpp(46,1): warning C4010: однострочный комментарий содержит знак объединения строк
+C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\Server.cpp(77,73): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
   Создание кода...
   Server.vcxproj -> C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\x64\Debug\Server.exe

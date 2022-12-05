@@ -1,0 +1,35 @@
+﻿  64 bit Processing .\Source.idl
+  Source.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\oaidl.idl
+  oaidl.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\objidl.idl
+  objidl.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\unknwn.idl
+  unknwn.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\wtypes.idl
+  wtypes.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\wtypesbase.idl
+  wtypesbase.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\basetsd.h
+  basetsd.h
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\guiddef.h
+  guiddef.h
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\ocidl.idl
+  ocidl.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\oleidl.idl
+  oleidl.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\servprov.idl
+  servprov.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\urlmon.idl
+  urlmon.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\msxml.idl
+  msxml.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\oaidl.acf
+  oaidl.acf
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\ocidl.acf
+  ocidl.acf
+  Server.cpp
+C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\Server.cpp(93,60): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\Server.cpp(131,29): warning C4018: <: несоответствие типов со знаком и без знака
+  Source_s.c
+  Server.vcxproj -> C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\x64\Debug\Server.exe

@@ -127,6 +127,7 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
+AGAIN_:
 	RPC_STATUS status;
 	RPC_CSTR szStringBinding = NULL;
 
@@ -197,12 +198,14 @@ int main()
 	{
 		char PathToFile[SIZE] = { 0 };
 		int ChoosenAction = 0;
+		
 		while (1)
 		{
 			cout << "1. Download file from server" << endl 
 				<< "2. Load file to server" << endl << 
 				"3. Delete file from server" << endl << 
-				"4. Exit" << endl 
+				"4. Exit" << endl <<
+				"5. Disconnect"
 				<< ">> Enter action: ";
 			cin >> ChoosenAction;
 			switch (ChoosenAction)
@@ -227,6 +230,9 @@ int main()
 				ClientOut(index_client);
 				goto OUT_;
 				break;
+			case 5:
+				goto AGAIN_;
+
 			default:
 				cout << ">> Incorrect action" << endl;
 			}

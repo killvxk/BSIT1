@@ -1,4 +1,4 @@
-﻿#include <windows.h>
+#include <windows.h>
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
@@ -21,7 +21,7 @@ void download_to_server(int index_client)
 	unsigned int len_buf = 0, len_path = 0, len_FileName = 0;
 	int res, EndOfFile = 0, symbol;
 
-	cout << ">> Enter exist file path on client: ";
+	cout << "Enter exist file path on client: ";
 	cin >> PathToFile;
 	len_path = strlen(PathToFile);
 
@@ -55,14 +55,14 @@ void download_to_server(int index_client)
 
 		if (res < 0)
 		{
-			cout << ">> No access" << endl;
+			cout << "No access" << endl;
 			break;
 		}
 		memset(DataOfFile, 0, cMaxBuf);
 		len_buf = 0;
 		if (EndOfFile)
 		{
-			cout << ">> Success" << endl;
+			cout << "Successful" << endl;
 			break;
 		}
 	}
@@ -77,7 +77,7 @@ void download_from_server(int index_client)
 	unsigned int len_buf = 0, len_path = 0, len_FileName = 0;
 	int res, EndOfFile = 0;
 
-	cout << ">> Enter exist file path on server: ";
+	cout << "Enter exist file path on server: ";
 	cin >> PathToFile;
 	for (; PathToFile[len_path] != L'\0'; len_path++);
 
@@ -99,7 +99,7 @@ void download_from_server(int index_client)
 		res = CopyOnClient((const unsigned char*)PathToFile, DataOfFile, &len_buf, index_client, &EndOfFile);
 		if (res < 0)
 		{
-			cout << ">> No access" << endl;
+			cout << "No access" << endl;
 			break;
 		}
 		if (IsOpenedFile)
@@ -116,16 +116,13 @@ void download_from_server(int index_client)
 	}
 	if (file != NULL)
 	{
-		cout << ">> Success" << endl;
+		cout << "Success" << endl;
 		fclose(file);
 	}
 }
 
 int main()
 {
-	setlocale(LC_ALL, "Rus");
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
 
 AGAIN_:
 	RPC_STATUS status;
@@ -134,9 +131,9 @@ AGAIN_:
 	char IPv4[32];
 	char ListeningPort[8];
 
-	cout << ">> Enter ip: ";
+	cout << "Enter ip: ";
 	cin >> IPv4;
-	cout << ">> Enter port: ";
+	cout << "Enter port: ";
 	cin >> ListeningPort;
 
 
@@ -144,69 +141,72 @@ AGAIN_:
 		NULL,
 		(RPC_CSTR)("ncacn_ip_tcp"),
 		(RPC_CSTR)(IPv4),
-		(RPC_CSTR)(ListeningPort),					
-		NULL,										
-		&szStringBinding);							
+		(RPC_CSTR)(ListeningPort),
+		NULL,
+		&szStringBinding);
 
 	if (status)
 	{
-		cout << "Подключение отсутсвует." << endl;
+		cout << "No connection." << endl;
 		exit(status);
 	}
 
 	status = RpcBindingFromStringBindingA(
-		szStringBinding,        
-		&hExample1Binding);     
-								
+		szStringBinding,
+		&hExample1Binding);
+
 	if (status)
 		exit(status);
 
 	int index_client = 0, size_pass;
 	char login[SIZE] = { 0 };
 	char password[SIZE] = { 0 };
-	
-	cout << ">> Enter login: ";
+
+	cout << "\n";
+	cout << "Enter login: ";
 	cin >> login;
-	cout << ">> Enter password: ";
+	cout << "Enter password: ";
 	
+
 	for (size_pass = 0; size_pass < SIZE && password[size_pass - 1] != L'\r'; size_pass++)
 		password[size_pass] = _getch();
-	
+
 	password[size_pass - 1] = '\0';
 	system("cls");
 
 	int res = MakeClientOnServer((const unsigned char*)login, (const unsigned char*)password, &index_client);
 
-	printf(">> Your index %d\n", index_client);
-	
+	printf("Your index %d\n", index_client);
+
 	switch (res)
 	{
 	case -2:
-		cout << ">> Exceeded the number of clients";
+		cout << "Exceeded the number of clients";
 		_getch();
 		return 0;
 		break;
 	case -1:
-		cout << ">> Authorisation Error";
+		cout << "Authorisation Error";
 		_getch();
 		return 0;
 		break;
 	}
-	cout << ">> Success login" << endl;
+	cout << "Registration completed successfully" << endl;
 
 	RpcTryExcept
 	{
 		char PathToFile[SIZE] = { 0 };
 		int ChoosenAction = 0;
-		
+
 		while (1)
 		{
-			cout << "1. Download file from server" << endl 
-				<< "2. Load file to server" << endl << 
-				"3. Delete file from server" << endl << 
+			cout << "1. Download file from server" << endl
+				<< "2. Load file to server" << endl <<
+				"3. Delete file from server" << endl <<
 				"4. Exit" << endl <<
-				"5. Disconnect"
-				<< ">> Enter action: ";
+				"5. Disconnect" << endl <<
+				"Enter action: ";
+
 			cin >> ChoosenAction;
 			switch (ChoosenAction)
 			{
@@ -217,13 +217,13 @@ AGAIN_:
 				download_to_server(index_client);
 				break;
 			case 3:
-				cout << ">> Enter exist file path on server: ";
+				cout << "Enter exist file path on server: ";
 				cin >> PathToFile;
 				res = DeleteFileOnServer((const unsigned char*)PathToFile, index_client);
 				if (res < 0)
-					cout << ">> No access" << endl;
+					cout << "No access" << endl;
 				else
-					cout << ">> Success" << endl;
+					cout << "Successful" << endl;
 				break;
 
 			case 4:
@@ -231,10 +231,11 @@ AGAIN_:
 				goto OUT_;
 				break;
 			case 5:
+				ClientOut(index_client);
 				goto AGAIN_;
 
 			default:
-				cout << ">> Incorrect action" << endl;
+				cout << "Incorrect action" << endl;
 			}
 			memset(PathToFile, 0, SIZE);
 			ChoosenAction = 0;
@@ -249,13 +250,13 @@ AGAIN_:
 
 		OUT_ :
 	status = RpcStringFreeA(
-		&szStringBinding); 
+		&szStringBinding);
 
 	if (status)
 		exit(status);
 
 	status = RpcBindingFree(
-		&hExample1Binding); 
+		&hExample1Binding);
 
 	if (status)
 		exit(status);

@@ -29,7 +29,7 @@
   64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\ocidl.acf
   ocidl.acf
   Server.cpp
-C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\Server.cpp(93,60): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\Server.cpp(131,29): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Vladislav\Desktop\Новая папка\BSIT1\Server\Server.cpp(93,60): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Vladislav\Desktop\Новая папка\BSIT1\Server\Server.cpp(131,29): warning C4018: <: несоответствие типов со знаком и без знака
   Source_s.c
-  Server.vcxproj -> C:\Users\Vladislav\Desktop\TashkentVV_SMIT_1\BSIT1\Server\x64\Debug\Server.exe
+  Server.vcxproj -> C:\Users\Vladislav\Desktop\Новая папка\BSIT1\Server\x64\Debug\Server.exe

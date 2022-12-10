@@ -11,7 +11,7 @@ using namespace std;
 #pragma comment (lib, "Rpcrt4.lib")
 #pragma warning(disable:4996)
 
-const unsigned int cMaxClient = 50;
+const unsigned int cMaxClient = 10;
 
 struct client
 {
@@ -54,7 +54,7 @@ int MakeClientOnServer(const unsigned char* login, const unsigned char* password
 	count_clients++;
 	(*index) = new_index;
 	
-	cout << ">> Success connection" << endl;
+	cout << ">> Сonnected!" << endl;
 	return 1;
 }
 
@@ -206,7 +206,7 @@ int main()
 
 	if (status)
 		exit(status);
-	cout << ">> Start server" << endl;
+	cout << ">> Server started!" << endl;
 
 	status = RpcServerListen(
 		1,                                   // Recommended minimum number of threads.

@@ -131,9 +131,9 @@ AGAIN_:
 	char IPv4[32];
 	char ListeningPort[8];
 
-	cout << "Enter ip: ";
+	cout << "Please, enter ip adress: ";
 	cin >> IPv4;
-	cout << "Enter port: ";
+	cout << "Please, enter port: ";
 	cin >> ListeningPort;
 
 
@@ -163,9 +163,9 @@ AGAIN_:
 	char password[SIZE] = { 0 };
 
 	cout << "\n";
-	cout << "Enter login: ";
+	cout << "Please, enter login: ";
 	cin >> login;
-	cout << "Enter password: ";
+	cout << "Please, enter password: ";
 	
 
 	for (size_pass = 0; size_pass < SIZE && password[size_pass - 1] != L'\r'; size_pass++)
@@ -176,7 +176,7 @@ AGAIN_:
 
 	int res = MakeClientOnServer((const unsigned char*)login, (const unsigned char*)password, &index_client);
 
-	printf("Your index %d\n", index_client);
+	printf("Your index is %d\n", index_client);
 
 	switch (res)
 	{
@@ -191,7 +191,7 @@ AGAIN_:
 		return 0;
 		break;
 	}
-	cout << "Registration completed successfully" << endl;
+	cout << "Registration completed!" << endl;
 
 	RpcTryExcept
 	{
@@ -200,9 +200,9 @@ AGAIN_:
 
 		while (1)
 		{
-			cout << "1. Download file from server" << endl
-				<< "2. Load file to server" << endl <<
-				"3. Delete file from server" << endl <<
+			cout << "1. Download file" << endl
+				<< "2. UpLoad file to server" << endl <<
+				"3. Delete file" << endl <<
 				"4. Exit" << endl <<
 				"5. Disconnect" << endl <<
 				"Enter action: ";
@@ -223,7 +223,7 @@ AGAIN_:
 				if (res < 0)
 					cout << "No access" << endl;
 				else
-					cout << "Successful" << endl;
+					cout << "Success!" << endl;
 				break;
 
 			case 4:
